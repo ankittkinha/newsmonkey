@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 
-export class NewsItem extends Component {
-    render() {
-        const { title, description, imageUrl, newsUrl, author, date, source } =
-            this.props;
+const NewsItem = (props) => {
+
+        const { title, description, imageUrl, newsUrl, author, date, source } = props;
         return (
             <div className="my-3">
                 <div className="card">
@@ -23,7 +22,7 @@ export class NewsItem extends Component {
                         </span>
                     </div>
 
-                    <img src={imageUrl} className="card-img-top" alt="..." />
+                    <img src={imageUrl} className="card-img-top" alt="Img" />
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{description}</p>
@@ -40,7 +39,7 @@ export class NewsItem extends Component {
                 </div>
             </div>
         );
-    }
+    
 }
 
 export default NewsItem;
